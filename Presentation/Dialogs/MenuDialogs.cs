@@ -9,7 +9,7 @@ public static class MenuDialogs
             Console.WriteLine("1. Skapa projekt");
             Console.WriteLine("2. Visa projekt");
             Console.WriteLine("3. Uppdatera projekt");
-            Console.WriteLine("Q. Avsluta");
+            Console.WriteLine("4. Avsluta");
             Console.Write("\nVälj ett alternativ: ");
             string option = Console.ReadLine()!.ToLower();
             switch (option)
@@ -26,8 +26,8 @@ public static class MenuDialogs
                 case "3":
                     UpdateProject();
                     break;
-                // Avsluta
-                case "q":
+                // Avsluta med 4 eller q - standard är 4, q är ett extra alternativ
+                case "4" or "q":
                     Console.Clear();
                     Console.WriteLine("Hej då!");
                     Environment.Exit(-1);
